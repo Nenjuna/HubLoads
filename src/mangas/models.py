@@ -16,5 +16,5 @@ class Manga(models.Model):
     cover = models.CharField(max_length=200)
     release = models.DateField()
     
-    # def __str__(self):
-    #     return self.title
+    def __str__(self):
+        return self.title

@@ -2,8 +2,21 @@
 
 {% block content %}
 
-<div class="bg-gradient-to-r from-blue-700 to-blue-900  flex h-screen justify-center items-center text-white bg-blue-500">
-    <h1 class="text-xl">Just Mangas</h1>
+<div class="bg-gradient-to-r from-blue-700 to-blue-900  flex h-screen justify-center items-center bg-blue-500">
+    {% comment %} <h1 class="text-xl">Just Mangas</h1> {% endcomment %}
+
+    <div>
+        {% for manga in mangas %}
+
+        <div class="bg-white p-4 m-4 rounded-lg shadow-lg">
+            <h2 class="text-xl">{{ manga.title }}</h2>
+            <p>{{ manga.description }}</p>
+            <p>{{ manga.author }}</p>
+            <p>{{ manga.status }}</p>
+            <p>{{ manga.created_at }}</p>
+        </div>
+        {% endfor %}
+    </div>
 
 </div>
 
